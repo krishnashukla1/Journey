@@ -78,6 +78,8 @@ import Customize from "./pages/Customize";     // ✅ new page
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ContactFooter from "./components/ContactFooter";
+import Contact from "./components/Contact";
+import ContactForm from "./components/ContactForm"; // ✅ new component
 
 function App() {
   return (

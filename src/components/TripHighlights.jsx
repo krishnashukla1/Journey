@@ -33,18 +33,8 @@ const TripHighlights = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      {/* <div className="relative w-full h-[300px] md:h-[400px] flex flex-col items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/package-single-cover-bg.png')" }}>
-        <div className="absolute inset-0 bg-black bg-opacity-30" />
-        <div className="relative px-4 text-center text-white">
-          <h1 className="text-3xl font-bold md:text-5xl">
-            4 Nights / 5 Days Andaman Trip
-          </h1>
-          <p className="mt-2 text-lg italic md:text-2xl">
-            Best for short & quick exploration.
-          </p>
-        </div>
-      </div> */}
-      <div
+
+      {/* <div
         className="relative w-full h-[400px] md:h-[700px] flex flex-col items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
@@ -61,51 +51,107 @@ const TripHighlights = () => {
             Best for short & quick exploration.
           </p>
         </div>
-        {/* <div className="flex flex-wrap justify-center gap-4 py-6 bg-none">
-        {tripDetails.map((item, index) => (
-          <div key={index} className="flex items-center gap-2 text-center md:text-left p-2 md:p-4 min-w-[150px]">
-            {item.icon}
-            <div>
-              <h4 className="text-sm font-bold md:text-base">{item.title}</h4>
-              <p className="text-sm text-gray-700 md:text-base">{item.value}</p>
-            </div>
-          </div>
-        ))}
-      </div> */}
-        {/* <div className="grid grid-cols-2 gap-6 mt-6 md:grid-cols-5">
+
+        <div className="grid grid-cols-2 gap-5 mt-6 md:grid-cols-5">
           {tripDetails.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
+            <div key={index} className="flex items-center space-x-1 text-left">
+             
               <img
                 src={item.icon}
                 alt={item.title}
-                className="w-20 h-8 mb-2"
+                className="flex-shrink-0 w-10 h-10"
               />
-              <h3 className="text-sm font-semibold">{item.title}</h3>
-              <p className="text-sm text-gray-600">{item.value}</p>
+
+            
+              <div className="flex flex-col">
+                <p className="text-sm italic">{item.title}</p>
+                <h3 className="text-sm font-bold text-black-600">
+                  {item.value}
+                </h3>
+              </div>
             </div>
           ))}
-        </div> */}
+        </div>
+      </div> */}
 
-        <div className="grid grid-cols-2 gap-5 mt-6 md:grid-cols-5">
+
+
+<div
+  className="relative w-full h-[400px] md:h-[700px] flex flex-col items-center justify-center bg-cover bg-center"
+  style={{ backgroundImage: `url(${bgImage})` }}
+>
+  <div className="relative px-4 text-center text-black">
+    {/* ✅ Responsive logo */}
+    <img
+      src={logo}
+      alt="Trip Logo"
+      className="object-contain w-auto h-16 mx-auto mb-4 md:h-32 lg:h-40"
+    />
+
+    {/* ✅ Responsive heading */}
+    <h1 className="text-2xl font-bold md:text-5xl">
+      4 Nights / 5 Days Andaman Trip
+    </h1>
+
+    {/* ✅ Responsive sub-text */}
+    <p className="mt-2 text-base italic md:text-2xl">
+      Best for short & quick exploration.
+    </p>
+  </div>
+
+  {/* ✅ Responsive grid for highlights */}
+  {/* <div className="grid grid-cols-2 gap-4 mt-6 md:grid-cols-5 md:gap-6">
+    {tripDetails.map((item, index) => (
+      <div
+        key={index}
+        className="flex items-center space-x-2 text-left md:flex-col md:items-center md:text-center"
+      >
+      
+        <img
+          src={item.icon}
+          alt={item.title}
+          className="flex-shrink-0 w-8 h-8 md:w-12 md:h-12"
+        />
+
+   
+        <div className="flex flex-col md:mt-2">
+          <p className="text-xs italic md:text-sm">{item.title}</p>
+          <h3 className="text-xs font-bold md:text-base">{item.value}</h3>
+        </div>
+      </div>
+    ))}
+  </div> */}
+
+
+
+<div className="grid grid-cols-2 gap-4 mt-6 md:grid-cols-5 md:gap-6">
   {tripDetails.map((item, index) => (
-    <div key={index} className="flex items-center space-x-1 text-left">
-      {/* Left side: Image */}
+    <div
+      key={index}
+      className="flex items-center space-x-2 text-left"
+    >
+      {/* Icon */}
       <img
         src={item.icon}
         alt={item.title}
-        className="flex-shrink-0 w-10 h-10"
+        className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10"
       />
 
-      {/* Right side: Title + Value */}
+      {/* Title + Value */}
       <div className="flex flex-col">
-        <p className="text-sm italic">{item.title}</p>
-      <h3 className="text-sm font-bold text-black-600">{item.value}</h3>
+        <p className="text-xs italic md:text-sm">{item.title}</p>
+        <h3 className="text-xs font-bold md:text-base">{item.value}</h3>
       </div>
     </div>
   ))}
 </div>
 
-      </div>
+  
+  
+</div>
+
+
+
 
       {/* Trip Details */}
       {/* <div className="flex flex-wrap justify-center gap-4 py-6 bg-white">
@@ -164,18 +210,17 @@ export default TripHighlights;
 //             Best for short & quick exploration.
 //           </p>
 //         </div>
-// {/* 
+// {/*
 //         <div className="grid grid-cols-2 gap-5 mt-6 md:grid-cols-5">
 //           {tripDetails.map((item, index) => (
 //             <div key={index} className="flex items-center space-x-1 text-left">
-           
+
 //               <img
 //                 src={item.icon}
 //                 alt={item.title}
 //                 className="flex-shrink-0 w-10 h-10"
 //               />
 
-            
 //               <div className="flex flex-col">
 //                 <p className="text-sm italic">{item.title}</p>
 //                 <h3 className="text-sm font-bold text-black-600">
@@ -209,7 +254,6 @@ export default TripHighlights;
 //     </div>
 //   ))}
 // </div>
-
 
 //       </div>
 
